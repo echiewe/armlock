@@ -1,0 +1,58 @@
+<?php
+
+function armlock_enqueue_styles() {
+
+    wp_enqueue_style(
+        'armlock-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        [],
+        filemtime(get_stylesheet_directory() . '/style.css')
+    );    
+
+    wp_enqueue_style(
+        'armlock-buttons',
+        get_stylesheet_directory_uri() . '/assets/css/buttons.css',
+        ['armlock-style'],
+        filemtime(get_stylesheet_directory() . '/assets/css/buttons.css')
+    );
+
+    wp_enqueue_style(
+        'armlock-cards',
+        get_stylesheet_directory_uri() . '/assets/css/cards.css',
+        ['armlock-style'],
+        filemtime(get_stylesheet_directory() . '/assets/css/cards.css')
+    );
+
+    wp_enqueue_style(
+        'armlock-contact',
+        get_stylesheet_directory_uri() . '/assets/css/contact.css',
+        ['armlock-style'],
+        filemtime(get_stylesheet_directory() . '/assets/css/contact.css')
+    );
+
+    wp_enqueue_style(
+        'armlock-faq',
+        get_stylesheet_directory_uri() . '/assets/css/faq.css',
+        ['armlock-style'],
+        filemtime(get_stylesheet_directory() . '/assets/css/faq.css')
+    );
+}
+
+add_action('wp_enqueue_scripts', 'armlock_enqueue_styles');
+
+function armlock_enqueue_scripts() {
+
+    wp_enqueue_script(
+        'armlock-faq',
+        get_stylesheet_directory_uri() . '/assets/js/faq.js',
+        [],
+        filemtime(get_stylesheet_directory() . '/assets/js/faq.js'),
+        true
+    );
+}
+
+add_action('wp_enqueue_scripts', 'armlock_enqueue_scripts');
+
+require_once get_stylesheet_directory() . '/inc/contact-form.php';
+require_once get_stylesheet_directory() . '/inc/shortcodes.php';
+require_once get_stylesheet_directory() . '/inc/smtp.php';

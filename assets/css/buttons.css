@@ -1,0 +1,65 @@
+/* Normal State */
+.wp-block-button__link,
+input[type="submit"],
+input[type="button"],
+button,
+.button {
+    background-color: #ab6227 !important;
+    color: #ffffff !important;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 8px 24px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Hover, Focus, and Active States */
+.wp-block-button__link:hover,
+.wp-block-button__link:focus,
+.wp-block-button__link:active,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+    background-color: #f8f6f2 !important;
+    color: #ab6227 !important;
+    border: 2px solid #ab62274f;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.read-more-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: .4s ease;
+    color: #ab6227;
+}
+
+.read-more-button::after {
+    content: "→";
+    transition: transform .4s ease;
+}
+
+.read-more-button:hover {
+    color: #ab6227;
+    font-weight: 600;
+}
+
+.read-more-button:hover::after {
+    transform: translateX(6px);
+}
+
+/******** STYLE OVERRIDES ********/
+.wc-block-mini-cart__button {
+    margin-top: 10px;
+    background-color: transparent !important;
+}
+
+.wc-block-mini-cart__button:hover {
+    background-color: transparent !important;
+}

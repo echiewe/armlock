@@ -1,0 +1,15 @@
+/*
+ Theme Name: Armlock
+ Template: twentytwentyfive
+ Version: 1.0.0
+*/
+
+.inline-bold {
+    font-weight: 600;
+}
+
+/******** STYLE OVERRIDES ********/
+:where(.wp-site-blocks *:focus),
+:where(.wp-site-blocks :focus) {
+    outline: none !important;
+}

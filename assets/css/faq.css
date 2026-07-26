@@ -1,0 +1,41 @@
+.faq-dropdown {
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 2px solid #ab62274f;
+}
+
+.faq-dropdown .faq-content {
+    font-size: 1rem;
+}
+
+.wp-block-details summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.wp-block-details summary::before {
+    content: "▶";
+    display: inline-block;
+    margin-right: .75rem;
+    transition: transform .3s ease;
+}
+
+.wp-block-details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.wp-block-details::details-content {
+    overflow: hidden;
+    block-size: 0;
+    opacity: 0;
+    transition: block-size 0.3s ease, content-visibility 0.3s ease, opacity 0.5s ease;
+    transition-behavior: allow-discrete;
+}
+
+.wp-block-details[open]::details-content {
+    block-size: calc-size(auto, size);
+    opacity: 1;
+}
