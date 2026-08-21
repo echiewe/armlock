@@ -23,7 +23,7 @@ function contact_form_shortcode() {
 
         <label>Message <textarea name="message" required></textarea></label>
 
-        <button type="submit" class="wp-element-button">
+        <button type="submit" class="wp-element-button button">
             Send Message
         </button>
 

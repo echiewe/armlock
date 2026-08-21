@@ -44,6 +44,11 @@
             "color": "color-mix(in srgb, currentColor 20%, transparent)",
             "name": "Accent 6",
             "slug": "accent-6"
+        },
+        {
+            "color": "#ffffffa8",
+            "name": "Pale white",
+            "slug": "pale-white"
         }
       ]
     }

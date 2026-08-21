@@ -11,23 +11,24 @@
     font-size: 1rem;
 }
 
-.wp-block-details summary {
+.faq-dropdown summary {
     cursor: pointer;
     list-style: none;
 }
 
-.wp-block-details summary::before {
+.faq-dropdown summary::before {
     content: "▶";
     display: inline-block;
     margin-right: .75rem;
     transition: transform .3s ease;
+    color: #ab6227;
 }
 
-.wp-block-details[open] summary::before {
+.faq-dropdown[open] summary::before {
     transform: rotate(90deg);
 }
 
-.wp-block-details::details-content {
+.faq-dropdown::details-content {
     overflow: hidden;
     block-size: 0;
     opacity: 0;
@@ -35,7 +36,7 @@
     transition-behavior: allow-discrete;
 }
 
-.wp-block-details[open]::details-content {
+.faq-dropdown[open]::details-content {
     block-size: calc-size(auto, size);
     opacity: 1;
 }

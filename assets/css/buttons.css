@@ -3,17 +3,22 @@
 input[type="submit"],
 input[type="button"],
 button,
-.button {
-    background-color: #ab6227 !important;
-    color: #ffffff !important;
+.button,
+.inner-button a,
+.wp-element-button {
+    background-color: #ab6227;
+    color: #ffffff;
     font-size: 18px;
-    font-weight: 300;
-    padding: 8px 24px;
+    font-weight: 300 !important;
+    padding: 5px 24px;
     border-radius: 5px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease; 
+    border: 2px solid transparent !important;
+    transition: all 0.3s ease !important; 
     text-decoration: none;
     display: inline-block;
+    max-height: 50px;
+    text-wrap: none;
+    margin-top: 0px !important;
 }
 
 /* Hover, Focus, and Active States */
@@ -23,7 +28,9 @@ button,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 button:hover,
-.button:hover {
+.button:hover.button,
+.inner-button:hover a,
+.wp-element-button:hover {
     background-color: #f8f6f2 !important;
     color: #ab6227 !important;
     border: 2px solid #ab62274f;
@@ -31,9 +38,44 @@ button:hover,
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+button.is-disabled,
+.button.is-disabled,
+:where(.wc-block-add-to-cart-with-options.is-invalid) .wp-block-woocommerce-product-button .wc-block-components-product-button__button {
+    background-color: #dadada !important;
+    color: #bdbdbd !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.secondary-button,
+.wc-block-product-filter-chips__item {
+    background-color: #f8f6f2 !important;
+    color: #ab6227 !important;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 5px 24px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease; 
+    text-decoration: none;
+    display: inline-block;
+    max-height: 50px;
+    text-wrap: none;
+}
+
+.secondary-button:hover,
+.wc-block-product-filter-chips__item[aria-checked=true] {
+    background-color: #ab6227 !important;
+    color: #ffffff !important;
+    border: 2px solid #f8f6f2;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 .read-more-button {
     display: inline-flex;
     align-items: center;
+    font-size: 1rem;
     gap: 0.5rem;
     text-decoration: none;
     transition: .4s ease;
@@ -48,6 +90,7 @@ button:hover,
 .read-more-button:hover {
     color: #ab6227;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .read-more-button:hover::after {
@@ -62,4 +105,19 @@ button:hover,
 
 .wc-block-mini-cart__button:hover {
     background-color: transparent !important;
+}
+
+@media (max-width: 1499px) {
+    .prev, .next {
+        padding: 2px;
+    }
+    .read-abstract-btn {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .prev, .next {
+        padding: 5px;
+    }
 }

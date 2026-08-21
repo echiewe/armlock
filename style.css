@@ -6,6 +6,150 @@
 
 .inline-bold {
     font-weight: 600;
+    background-color: #fad77e;
+}
+
+::selection {
+    background-color: #ab6227;
+    color: #ffffff;
+}
+
+.width-ctrl-img img {
+    width: 100%;
+}
+
+.height-ctrl-vid video {
+    height: 350px;
+}
+
+.height-ctrl-instr {
+    display: flex;
+    justify-content: end;
+}
+
+@media (min-width: 800px) {
+    .height-ctrl-instr video {
+        height: 600px;
+        width: 800px;
+    }
+}
+
+@media (max-width: 799px) {
+    .height-ctrl-instr video {
+        width: 100%;
+    }
+}
+
+/* .hero {
+    position: relative;
+    height: 90vh;
+} */
+
+.hero .wp-block-image {
+    display: flex;
+    justify-content: end;
+    height: 90vh;
+    object-fit: contain;
+}
+
+.hero .wp-block-column.is-vertically-aligned-center {
+    align-self: stretch;
+}
+
+.wp-block-navigation-item__label {
+    transition: color 0.3s ease;
+}
+.wp-block-navigation-item__label:hover {
+    color: #ab6227;
+}
+
+.wp-block-navigation-item__content:hover {
+    text-decoration: none;
+}
+
+/******** SIZING OVERRIDES ********/
+@media (min-width: 1100px) and (max-width: 1499px) {
+    .early-stack-cols > .wp-block-column {
+        flex-basis: 50% !important;
+        width: 50vw !important;
+        min-width: 300px !important;
+    }
+}
+@media (max-width: 1499px) {
+    .early-stack-cols {
+        flex-direction: column;
+        align-items: center !important;
+        gap: 0;
+    }
+    .early-stack-cols .wp-block-group {
+        height: max-content !important;
+        min-height: 0;
+    }
+    .no-horizontal-padding {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .group-horizontal-padding {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .small-vertical-padding {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .group-vertical-padding {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .instructions-header-padding {
+        padding: 50px 30px !important;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1500px) {
+    .group-horizontal-padding {
+        padding-left: 5vw !important;
+        padding-right: 5vw !important;
+    }
+    .technique-padding {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 0px;
+        padding-left: 6vw;
+    }
+    .instructions-header-padding {
+        padding: 50px 30px;
+        width: 100%;
+    }
+    .justify-centre {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 999px) {
+    nav.wp-block-navigation.is-responsive
+        .wp-block-navigation__responsive-container-open {
+        display: flex !important;
+    }
+
+    nav.wp-block-navigation.is-responsive
+        .wp-block-navigation__responsive-container:not(.is-menu-open) {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1000px) {
+    nav.wp-block-navigation.is-responsive
+        .wp-block-navigation__responsive-container-open {
+        display: none !important;
+    }
+
+    nav.wp-block-navigation.is-responsive
+        .wp-block-navigation__responsive-container:not(.is-menu-open) {
+        display: block !important;
+    }
 }
 
 /******** STYLE OVERRIDES ********/
