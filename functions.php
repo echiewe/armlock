@@ -7,7 +7,7 @@ function armlock_enqueue_styles() {
         get_stylesheet_directory_uri() . '/style.css',
         [],
         filemtime(get_stylesheet_directory() . '/style.css')
-    );    
+    );
 
     wp_enqueue_style(
         'armlock-animation',
@@ -87,10 +87,26 @@ function armlock_enqueue_scripts() {
     );
 
     wp_enqueue_script(
+        'armlock-diagnosis',
+        get_stylesheet_directory_uri() . '/assets/js/diagnosis.js',
+        [],
+        filemtime(get_stylesheet_directory() . '/assets/js/diagnosis.js'),
+        true
+    );
+
+    wp_enqueue_script(
         'armlock-responsivity',
         get_stylesheet_directory_uri() . '/assets/js/responsivity.js',
         [],
         filemtime(get_stylesheet_directory() . '/assets/js/responsivity.js'),
+        true
+    );
+
+    wp_enqueue_script(
+        'armlock-science',
+        get_stylesheet_directory_uri() . '/assets/js/science.js',
+        [],
+        filemtime(get_stylesheet_directory() . '/assets/js/science.js'),
         true
     );
 }
