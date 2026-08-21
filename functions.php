@@ -71,6 +71,14 @@ add_action('wp_enqueue_scripts', 'armlock_enqueue_styles');
 function armlock_enqueue_scripts() {
 
     wp_enqueue_script(
+        'armlock-buy',
+        get_stylesheet_directory_uri() . '/assets/js/buy.js',
+        [],
+        filemtime(get_stylesheet_directory() . '/assets/js/buy.js'),
+        true
+    );
+
+    wp_enqueue_script(
         'armlock-faq',
         get_stylesheet_directory_uri() . '/assets/js/faq.js',
         [],
