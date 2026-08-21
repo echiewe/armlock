@@ -10,6 +10,13 @@ function armlock_enqueue_styles() {
     );    
 
     wp_enqueue_style(
+        'armlock-animation',
+        get_stylesheet_directory_uri() . '/assets/css/animation.css',
+        ['armlock-style'],
+        filemtime(get_stylesheet_directory() . '/assets/css/animation.css')
+    );
+
+    wp_enqueue_style(
         'armlock-buttons',
         get_stylesheet_directory_uri() . '/assets/css/buttons.css',
         ['armlock-style'],
@@ -31,10 +38,31 @@ function armlock_enqueue_styles() {
     );
 
     wp_enqueue_style(
+        'armlock-diagnosis',
+        get_stylesheet_directory_uri() . '/assets/css/diagnosis.css',
+        ['armlock-style'],
+        filemtime(get_stylesheet_directory() . '/assets/css/diagnosis.css')
+    );
+
+    wp_enqueue_style(
         'armlock-faq',
         get_stylesheet_directory_uri() . '/assets/css/faq.css',
         ['armlock-style'],
         filemtime(get_stylesheet_directory() . '/assets/css/faq.css')
+    );
+
+    wp_enqueue_style(
+        'armlock-founders',
+        get_stylesheet_directory_uri() . '/assets/css/founders.css',
+        ['armlock-style'],
+        filemtime(get_stylesheet_directory() . '/assets/css/founders.css')
+    );
+
+    wp_enqueue_style(
+        'armlock-science',
+        get_stylesheet_directory_uri() . '/assets/css/science.css',
+        ['armlock-style'],
+        filemtime(get_stylesheet_directory() . '/assets/css/science.css')
     );
 }
 

@@ -1,0 +1,28 @@
+@media (min-width: 1500px) {
+    .recommend-detail summary {
+        pointer-events: none;
+        cursor: default;
+        list-style: none;
+    }
+    .recommend-detail summary::-webkit-details-marker,
+    .recommend-detail summary::marker,
+    .recommend-detail summary::before {
+        display: none;
+    }
+    .recommend-detail:not([open]) > *:not(summary) {
+        display: block !important;
+        content-visibility: visible !important;
+    }
+
+}
+
+@media (max-width: 1499px) {
+    .recommend-detail summary {
+        cursor: pointer;
+    }
+}
+
+.banner img {
+    height: 45vh;
+    object-fit: cover;
+}
