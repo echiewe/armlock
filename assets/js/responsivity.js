@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const CONTENT_FADE_DISTANCE = 600;
   const OVERLAY_FADE_DISTANCE = 400;
   const OVERLAY_MAX_OPACITY = 0.5;
-  const SWIPE_THRESHOLD = 5; 
+  const SWIPE_THRESHOLD = 10; 
 
   let ticking = false;
   let isAnimating = false;
@@ -63,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function inHeroZone() {
     const revealDistance = getRevealDistance();
-    return window.scrollY >= 0 && window.scrollY <= revealDistance;
+    const result = window.scrollY >= 0 && window.scrollY < revealDistance - 2;
+    return result;
   }
 
   // --- touch (swipe) handling ---
