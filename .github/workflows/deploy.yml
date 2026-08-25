@@ -1,0 +1,24 @@
+name: Deploy ArmLock theme via FTP
+
+on:
+  push:
+    branches:
+      - main # deployment triggered on main branch pushes
+
+jobs:
+  web-deploy:
+    name: Sync Files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Latest Code
+        uses: actions/checkout@v4
+
+      - name: Sync Files to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ./
+          local-dir: ./
+          dry-run: true
