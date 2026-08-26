@@ -13,12 +13,23 @@
         display: block !important;
         content-visibility: visible !important;
     }
-
+    .mobile {
+        display: none;
+    }
+    .non-mobile {
+        display: inline;
+    }
 }
 
 @media (max-width: 1499px) {
     .recommend-detail summary {
         cursor: pointer;
+    }
+    .non-mobile {
+        display: none;
+    }
+    .mobile {
+        display: inline;
     }
 }
 
