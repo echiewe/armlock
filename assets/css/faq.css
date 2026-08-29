@@ -17,26 +17,33 @@
 }
 
 .faq-dropdown summary::before {
-    content: "▶";
+    content: "";
     display: inline-block;
+    width: 0;
+    height: 0;
     margin-right: .75rem;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #ab6227;
     transition: transform .3s ease;
-    color: #ab6227;
 }
 
 .faq-dropdown[open] summary::before {
     transform: rotate(90deg);
 }
 
-.faq-dropdown::details-content {
+.faq-dropdown summary ~ * {
+    grid-template-rows: 0fr;
     overflow: hidden;
-    block-size: 0;
     opacity: 0;
-    transition: block-size 0.3s ease, content-visibility 0.3s ease, opacity 0.5s ease;
-    transition-behavior: allow-discrete;
+    transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
 }
 
-.faq-dropdown[open]::details-content {
-    block-size: calc-size(auto, size);
+.faq-dropdown[open] summary ~ * {
+    grid-template-rows: 1fr;
     opacity: 1;
+}
+
+.faq-dropdown summary ~ * > * {
+    overflow: hidden; 
 }
