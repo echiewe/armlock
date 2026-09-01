@@ -87,6 +87,14 @@ function armlock_enqueue_scripts() {
     );
 
     wp_enqueue_script(
+        'armlock-faq',
+        get_stylesheet_directory_uri() . '/assets/js/faq.js',
+        [],
+        filemtime(get_stylesheet_directory() . '/assets/js/faq.js'),
+        true
+    );
+
+    wp_enqueue_script(
         'armlock-responsivity',
         get_stylesheet_directory_uri() . '/assets/js/responsivity.js',
         [],

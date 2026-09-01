@@ -47,3 +47,11 @@
 .faq-dropdown summary ~ * > * {
     overflow: hidden; 
 }
+
+.faq-dropdown summary {
+    font-weight: 300;
+}
+
+.faq-dropdown summary.selected {
+    font-weight: 600;
+}
