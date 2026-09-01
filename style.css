@@ -9,6 +9,10 @@
     background-color: #fad77e;
 }
 
+.inline-semi-bold {
+    font-weight: 600;
+}
+
 ::selection {
     background-color: #ab6227;
     color: #ffffff;
